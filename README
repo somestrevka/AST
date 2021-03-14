@@ -1,0 +1,18 @@
+  Implementare iocla_atoi: Determinam lungimea sirului. Scoatem caracterul din
+ sirul sursa. Scadem din el 48 pentru a-l transforma in cifra. Numarul rezultat
+ il stocam momentan in edx. Inmultim edx cu 10 si adunam noua cifra. La final, 
+ verificam daca am avut sau nu un numar negativ. Daca da, atunci inmultim numa-
+ rul cu -1. Trecem numarul rezultat din edx in eax.
+  Implementare create_tree: Magia are loc in functia worker. Pentru navigare 
+ prin sirul primit, am folosit registrul esi. Se parcurge sirul pana la gasi-
+ rea unui spatiu. Cat timp se parcurge, copiem caracterele din sirul sursa in
+ variabila aux. Punem caracterul null la finalul lui aux. Copiem folosind
+ functia strdup sirul din aux in reserve. 
+   Dupa caz, avem label1, unde tratam cazul in care avem un operator si label2,
+ unde tratam situatia in care avem un numar. 
+   In ambele label-uri alocam memoria necesara nodului folosind calloc. Rezul-
+ tatul este stocat in edx momentan. Apelam pentru ambi fii functia worker si 
+ stocam rezultatele in edx. Mutam rezultatul din edx in eax.
+   In cazul in care avem un operand, alocam memoreia necesara nodului. Punem 
+ in registrul edx sirul de caractere corespunzator si marcam cei doi fii cu
+ null. Mutam nodul din edx in eax.
